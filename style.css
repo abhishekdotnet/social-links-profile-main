@@ -77,6 +77,10 @@ button
     border-radius: 3px;
     margin: 1% 0;
 }
+button:hover
+{
+    background-color: var(--Green);
+}
 .card img
 {
     display: block;
