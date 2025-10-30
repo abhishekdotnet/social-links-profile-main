@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+
+.inter-normal {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+:root {
+    --Green: hsl(75, 94%, 57%);
+
+    --White: hsl(0, 0%, 100%);
+
+    --Grey700: hsl(0, 0%, 20%);
+    --Grey800: hsl(0, 0%, 12%);
+    --Grey900: hsl(0, 0%, 8%);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Inter", sans-serif;
+}
+body
+{
+    background-color: var(--Grey900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+.attribution{
+    color: var(--White) !important;
+   
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+  
+}
+
+.attribution a:hover
+{
+    color: hsl(75, 94%, 57%);
+}
+.card
+{
+    flex-direction: column;
+    display: flex;
+   align-items: center;
+    max-width: 370px;
+    max-height: 550px;
+    height: 100%;
+    width: 100%;
+    background-color: var(--Grey800) ;
+    
+}
+
+.card >img 
+{
+  margin-top: 10%;
+}
+p,button
+{
+    font-size: 1rem;
+    color: var(--White);
+    line-height: 34px;
+}
+button
+{
+    background-color: var(--Grey700);
+    border: none;
+    width: 90%;
+    border-radius: 3px;
+    margin: 1% 0;
+}
+.card img
+{
+    display: block;
+    width: auto;
+    height: 20%;
+    border-radius: 50%;
+   
+}
+.name
+{
+     font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--White);
+}
+.location
+{
+    color: var(--Green);
+}
+.gradient-border {
+  --borderWidth: 3.5px;
+
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
